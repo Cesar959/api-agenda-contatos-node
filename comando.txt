@@ -1,0 +1,23 @@
+npx sequelize-cli model:generate --name Contatos --attributes foto:string,nome:string,email:string,data_nascimento:dateonly,descricao:text,telefone:string
+npx sequelize-cli model:generate --name Usuarios --attributes nome:string,email:string,senha:string
+npx sequelize-cli model:generate --name tokenInactive --attributes token:text,data:date
+
+
+
+
+==========Contato============
+foto
+nome
+email
+data_nascimento
+descricao
+telefone        
+
+==========Usuario============
+nome
+email
+senha
+
+==========Token-inactive===========
+token
+data
