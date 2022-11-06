@@ -20,9 +20,6 @@ exports.verificacaoToken = (req, res, next) => {
         next()
     })
 
-
-    
-
 }
 
 exports.verificacaoTokenRefresh = async (req, res, next) => {

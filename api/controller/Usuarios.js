@@ -34,7 +34,7 @@ class controllerUsuarios {
             }
             else{
                 const token = jwt.sign({ email:email }, process.env.SECURITY_TOKEN, { expiresIn: '1h' })
-                const refreToken = jwt.sign({ token }, process.env.SECURITY_TOKEN, { expiresIn: '1d' })
+                const refreToken = jwt.sign({ token }, process.env.SECURITY_TOKEN, { expiresIn: '7d' })
                 res.header('authorization', token)
                 res.header('refreshToken', refreToken)
                 res.status(200).json({ msg: 'Login efetuado com sucesso' })
@@ -66,7 +66,7 @@ class controllerUsuarios {
 
         const tokenNovo = jwt.sign({ token }, process.env.SECURITY_TOKEN, { expiresIn: '1h' })
 
-        res.header('refreshToken', tokenNovo)
+        res.header('NovoToken', tokenNovo)
         return res.status(200).json({ msg: 'Refresh Token efetuado com sucesso' })
 
     }
